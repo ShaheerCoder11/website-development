@@ -1,0 +1,23 @@
+body{
+    background-color: aqua;
+}
+.image {
+    width: 100px;
+    height: 100px;
+    
+}
+.title {
+    font-size: 15px;
+    text-decoration: Itlics;
+
+}
+.card{
+    font-size: 15px;
+    background-image: linear-gradient(to right, skyblue, brown);
+    width: 300px;
+    height: 100px;
+}
+
+.footer {
+    color: Red;
+}
