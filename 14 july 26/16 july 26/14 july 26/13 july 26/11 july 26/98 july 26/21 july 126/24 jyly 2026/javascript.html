@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div>
+            <h2>My phone contacts</h2>
+            <p>introduction to objects in javascript</p>
+        <div>
+            <h5>contact details</h5>
+            <ul>
+                <li>
+            <span>Name;</span>
+            <strong id="Name"></strong>
+                </li>
+
+                <li>
+                    <span>Phone;</span>
+                    <strong id="Phone"></strong>
+                </li>
+
+                <li>
+                    <span> School </span> 
+                    <strong id="School"></strong>
+                </li>
+
+                <li>
+                    <span>City</span>
+                    <strong id="City"></strong>
+                </li>
+
+            </ul>
+        </div>
+        <h6>javascript</h6>
+        <pre id="codedisplay"></pre>
+        </div>
+        <script>
+            var mycontact={Name:"Muhammad Shaheer Irshad",Phone:"+9203254324767",School:"Insight Evening Coaching",City:"Mian Channu"}
+            var n=document.getElementById("Nmae")
+             var p=document.getElementById("Phone")
+             n.textContent=mycontact.name;
+             p.textContent=mycontact.phone;
+             var s=document.getElementById("School")
+             var c=document.getElementById("City")
+             s.textContent=mycontact["School"];
+             c.textContent=mycontact["City"];
+             var code=document.getElementById("codedisplay")
+             code.textContent= ' var myname={Name:"Muhammad Shaheer Irshad", '+' Phone:"+9203254324767", '+'School:"Insight Evening Coaching", '+' City:"Mian Channu"}'
+           </script>
+    </body>
+</body>
+</html>
