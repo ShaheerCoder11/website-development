@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <body>
+    
         <div>
             <h2>My phone contacts</h2>
             <p>introduction to objects in javascript</p>
@@ -40,17 +40,17 @@
         </div>
         <script>
             var mycontact={Name:"Muhammad Shaheer Irshad",Phone:"+9203254324767",School:"Insight Evening Coaching",City:"Mian Channu"}
-            var n=document.getElementById("Nmae")
+            var n=document.getElementById("Name")
              var p=document.getElementById("Phone")
-             n.textContent=mycontact.name;
-             p.textContent=mycontact.phone;
+             n.textContent=mycontact.Name;
+             p.textContent=mycontact.Phone;
              var s=document.getElementById("School")
              var c=document.getElementById("City")
              s.textContent=mycontact["School"];
              c.textContent=mycontact["City"];
              var code=document.getElementById("codedisplay")
-             code.textContent= ' var myname={Name:"Muhammad Shaheer Irshad", '+' Phone:"+9203254324767", '+'School:"Insight Evening Coaching", '+' City:"Mian Channu"}'
+             code.textContent= ' var myname={Name:"Muhammad Shaheer Irshad", '+' Phone:"+9203254324767", '+'School:"Insight Evening Coaching", '+' City:"Mian Channu"}';
            </script>
-    </body>
+   
 </body>
 </html>
