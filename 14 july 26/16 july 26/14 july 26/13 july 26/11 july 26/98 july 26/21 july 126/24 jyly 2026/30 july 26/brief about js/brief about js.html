@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Game Profile</h1>
+    <button onclick="showprofile()">show profile </button>
+    <div>Name: <span id="name"></span></div>
+    <div>Score: <span id="score"></span></div>
+    <div>Top Score: <span id="top score"></span></div>
+    <div>Rank: <span id="rank"></span></div>
+    <div>Greetings: <span id="greetings"></span></div>
+    <div>Stars: <span id="stars"></span></div>
+    <div>Bonus Lavel: <span id="bonus"></span></div>
+    <div>Team Name: <span id="team"></span></div>
+    <script>
+        function showprofile(){
+        let Name="shaheer";
+        let myscore="545";
+        let  highscore="555";
+        let bonus="null";
+        let team;
+        let topscore=myscore==highscore;
+        let rank;
+        if(myscore>=550){
+            rank="Gold";
+        }
+        else if(myscore>540){
+            rank="silver";
+        }
+        else{rank="Bronze";
+
+        }
+        let stars=""
+        let count="0"
+        while(count<5){
+            stars=stars="+";
+            count=count=1;
+        }
+        let hour=new Date.getHour();
+        let greetings;
+        if (hour<12){
+        greetings="goodmorning";
+        }
+        else if (hour<17){
+        greetings="goodevening";
+        }
+        else{
+        grretings="goodevening"
+        }
+        document.getElementById("name").innerHTML=Nme;
+        document.getElementById("score").innerHTML=myscore;
+        document.getElementById("topscore").innerHTML=topscore;
+        document.getElementById("rank").innerHTML=rank;
+        document.getElementById("greetings").innerHTML=greetings;
+        document.getElementById("stars").innerHTML=stars;
+        document.getElementById("bonus").innerHTML=bonus;
+        document.getElementById("team").innerHTML=team;
+
+        }
+    </script>
+</body>
+</html>
