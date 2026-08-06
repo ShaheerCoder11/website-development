@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My plannet Cards </h1>
+    <p>We are using javascript classes </p>
+    <button onclick="showplanet()">showplanet</button>
+    <div class="cards">
+        <div id="card1"></div>
+        <div id="card2"></div>
+        <div id="card3"></div>
+    </div>
+    <script>
+        class planet{
+            constructor(name,fact){
+            this.name=name;
+            this.fact=fact;
+            
+            }
+            describe(){
+                return this.name+":"+ this.fact;
+            }
+            
+        }
+        function showplanet(){
+            let p1=new planet("Earth", "the life exists here");
+            let p2=new planet("Mars", "the red planet");
+            let p3=new planet("Juppiter", "the largest planet in the universe");
+            document.getElementById("card1").innerHTML=p1.describe();
+             document.getElementById("card2").innerHTML=p2.describe();
+              document.getElementById("card3").innerHTML=p3.describe();
+        }
+
+    </script>
+</body>
+</html>
