@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>my playlist sorter</h1>
+        <p>sort and label your music playlist</p>
+        <div>
+            <h3>play counts </h3>
+            <button onclick="sortleast()">least played first</button>
+            <button onclick="sortmost()">most played first</button>
+            <div id="countresult"></div>
+        </div>
+        <div>
+            <h3>song names</h3>
+            <button onclick="sortA()">sort A to Z</button>
+            <button onclick="sortD()">sort z to A</button>
+            <div id="nameresult"></div>
+        </div>
+        <div>
+            <h3>label every play count</h3>
+            <button onclick="addlabel()">add plays label</button>
+            <div id="labelresult"></div>
+        </div>
+    </div>
+    <script>
+        var songs=["bouce","gloe","rush","spark","zoom"];
+        var plays=["320","45","230","345","78"];
+        document.getElementById("nameresult").innerHTML="songs:"+songs;
+        document.getElementById("countresult").innerHTML="plays:"+plays;
+        document.getElementById("labelresult").innerHTML="press:"+"press the button";
+        function sortA(){
+            songs.sort();
+             document.getElementById("nameresult").innerHTML="A to Z"+songs;
+        }
+         function sortD(){
+            songs.sort();
+            song.reverse();
+             document.getElementById("nameresult").innerHTML="Z to A"+songs;
+        }
+        function  sortmost(){
+            plays.sort(function(a,b){return b-a;});
+            document.getElementById("countresult").innerHTML="most played first"+plays;
+        }
+         function  sortleast(){
+            pays.sort(function(a,b){return a-b;});
+            document.getElementById("countresult").innerHTML="least played first"+plays;
+        }
+        function addlabel(){
+            var l=plays.map(function(c){return c="plays"});
+            document.getElementById("labelresult").innerHTML="labelled:"+l;
+        }
+        
+    </script>
+</body>
+</html>
