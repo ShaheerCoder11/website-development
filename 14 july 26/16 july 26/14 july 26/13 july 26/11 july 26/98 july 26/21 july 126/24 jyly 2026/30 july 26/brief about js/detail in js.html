@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>my magic world lab</h1>
+    <p>discover types switch them find and swap and catch errors</p>
+    <div>
+        <h3>what type is it</h3>
+        <button onclick="checktype()">reveal the types</button>
+        <div id="typeresult">press the button to reveal the secret</div>
+
+    </div>
+    <div>
+        <h3>switch the type</h3>
+        <input id="numin" type="number">
+        <button onclick="tostr()">turn into text</button>
+        <button onclick="tonum()">turn into num</button>
+        <div id="convertresult">type a num above a press button </div>
+    </div>
+    <div>
+        <h3>find and swap a world</h3>
+        <input id="findw" type="text">
+        <input id="swapw" type="text">
+        <button onclick="dosearch()">find it</button>
+        <button onclick="doreplace()">swap it</button>
+        <div id="searchresult">sentence:the dragon flew over the castle</div>
+    </div>
+    <div>
+        <h3>catch the mistake</h3>
+        <input id="divin" type="number">
+        <button onclick="trysafe()">try it</button>
+        <div id="error">type a num or somethig else</div>
+    </div>
+    <script>
+       var s="the dragon fly over the big castle";
+       function checktype(){
+        document.getElementById("typeresult").innerHTML="name 'rimsha' -typeof"+"rimsha";
+       }    
+    </script>
+
+</body>
+</html>

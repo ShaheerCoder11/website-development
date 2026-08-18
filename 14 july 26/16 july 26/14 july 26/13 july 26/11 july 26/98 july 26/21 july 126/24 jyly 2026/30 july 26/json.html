@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1> My delevery Tracker</h1>
+  <button onclick="saveorder()">save order</button>
+   <button onclick="startdelivery()">startdelivery</button>
+   <div>json text<span id="json text"></span></div>
+   <div>loaded item<span id="loaded items"></span></div>
+   <div>loaded price<span id="loaded price"></span></div>
+   <div>status: <span id=" status"></span></div>
+   <div>result: <span id="result"></span></div>
+
+<script>
+    // json - the order stored as a javascript
+    let order={
+        item: "Pizza",
+        price: 5,
+        shop: "my snack pack"
+    }
+     
+     // json.stringify() and json.parse
+     function saveorder(){
+        let jsontext= JSON.stringify(order);
+        let loadedorder= JSON.parse(jsontext)
+
+        document.getElementById("json-text")
+}
+</script>
+
+
+</body>
+</html>
