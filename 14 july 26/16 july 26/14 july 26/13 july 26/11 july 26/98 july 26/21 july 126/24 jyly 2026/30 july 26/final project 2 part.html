@@ -13,7 +13,10 @@
 
     <title>BHO Restaurant</title>
 
+
     <style>
+
+        /* ================= BODY ================= */
 
         body {
             background-color: blueviolet;
@@ -21,7 +24,40 @@
                 'Arial Narrow', Arial, sans-serif;
         }
 
-        /* About Image */
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background-color: #5b0e8b;
+            padding: 15px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107;
+        }
+
+
+        /* ================= ABOUT ================= */
 
         .about-img {
             width: 300px;
@@ -29,15 +65,14 @@
             object-fit: cover;
         }
 
-        /* Learn More Button */
-
         .btn-outline-warning {
             border-width: 3px;
             font-weight: 600;
             padding: 10px 30px;
         }
 
-        /* Menu */
+
+        /* ================= MENU ================= */
 
         .menu-section {
             margin-top: 40px;
@@ -75,12 +110,77 @@
             font-weight: bold;
         }
 
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background-color: #5b0e8b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .about-img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
     </style>
 
 </head>
 
 
 <body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <h3>BHO Restaurant</h3>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#menu">Menu</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
 
 
     <!-- ================= ABOUT SECTION ================= -->
@@ -102,7 +202,7 @@
             </div>
 
 
-            <!-- ABOUT TEXT -->
+            <!-- TEXT -->
 
             <div class="col-6 pl-5 pb-5 text-white">
 
@@ -152,7 +252,7 @@
 
     <!-- ================= MENU SECTION ================= -->
 
-    <div class="container menu-section">
+    <div id="menu" class="container menu-section">
 
 
         <h2 class="menu-title">
@@ -191,12 +291,10 @@
                     </thead>
 
 
-                    <!-- TABLE DATA -->
+                    <!-- FOOD ITEMS -->
 
                     <tbody>
 
-
-                        <!-- BIRYANI -->
 
                         <tr>
 
@@ -217,8 +315,6 @@
                         </tr>
 
 
-                        <!-- KARAHI -->
-
                         <tr>
 
                             <td>
@@ -237,8 +333,6 @@
 
                         </tr>
 
-
-                        <!-- BURGER -->
 
                         <tr>
 
@@ -259,8 +353,6 @@
                         </tr>
 
 
-                        <!-- PIZZA -->
-
                         <tr>
 
                             <td>
@@ -280,8 +372,6 @@
                         </tr>
 
 
-                        <!-- FRIES -->
-
                         <tr>
 
                             <td>
@@ -300,8 +390,6 @@
                         </tr>
 
 
-                        <!-- DRINK -->
-
                         <tr>
 
                             <td>
@@ -319,8 +407,6 @@
 
                         </tr>
 
-
-                        <!-- CAKE -->
 
                         <tr>
 
@@ -343,9 +429,7 @@
 
                     </tbody>
 
-
                 </table>
-
 
             </div>
 
@@ -355,8 +439,41 @@
 
 
 
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section id="contact" class="contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <p>
+            📍 Main Road, Pakistan
+        </p>
+
+        <p>
+            📞 0300-1234567
+        </p>
+
+        <p>
+            ✉️ bhorestaurant@gmail.com
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 BHO Restaurant | All Rights Reserved
+        </p>
+
+    </footer>
+
+
 </body>
 
 </html>
-
-
