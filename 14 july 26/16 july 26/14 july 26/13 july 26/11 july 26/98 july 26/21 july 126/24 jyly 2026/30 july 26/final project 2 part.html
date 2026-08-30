@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>BHO Restaurant</title>
+
+    <style>
+
+        body {
+            background-color: blueviolet;
+            font-family: 'Franklin Gothic Medium',
+                'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* About Image */
+
+        .about-img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Learn More Button */
+
+        .btn-outline-warning {
+            border-width: 3px;
+            font-weight: 600;
+            padding: 10px 30px;
+        }
+
+        /* Menu */
+
+        .menu-section {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+
+        .menu-title {
+            color: white;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        table {
+            width: 100%;
+            background-color: white;
+        }
+
+        th {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        td {
+            padding: 15px;
+        }
+
+        tr:hover {
+            background-color: #f2d9ff;
+        }
+
+        .price {
+            color: purple;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= ABOUT SECTION ================= -->
+
+    <div id="about" class="container p-5">
+
+        <div class="row">
+
+
+            <!-- IMAGE -->
+
+            <div class="col-6">
+
+                <img
+                    class="about-img"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExLrd97nxCdDSXxB2iOBHMFsNgmdv8uXTflFADK4fJA&s=10"
+                    alt="BHO Restaurant">
+
+            </div>
+
+
+            <!-- ABOUT TEXT -->
+
+            <div class="col-6 pl-5 pb-5 text-white">
+
+                <h3>
+                    About BHO Restaurant
+                </h3>
+
+
+                <p>
+
+                    Welcome to BHO Restaurant, where a passion
+                    for authentic flavors meets a warm,
+                    inviting atmosphere.
+
+                    Founded in the heart of the community,
+                    we pride ourselves on crafting memorable
+                    meals using fresh ingredients and
+                    traditional recipes.
+
+                </p>
+
+
+                <p>
+
+                    Whether you are joining us for a cozy
+                    family dinner, a quick lunch, or a
+                    celebratory evening out, our dedicated
+                    team is here to ensure every bite is
+                    exceptional.
+
+                </p>
+
+
+                <button class="btn btn-outline-warning">
+
+                    Learn More
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= MENU SECTION ================= -->
+
+    <div class="container menu-section">
+
+
+        <h2 class="menu-title">
+            Our Menu
+        </h2>
+
+
+        <div class="row">
+
+            <div class="col-12">
+
+
+                <table class="table table-bordered">
+
+
+                    <!-- TABLE HEADER -->
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Food
+                            </th>
+
+                            <th>
+                                Description
+                            </th>
+
+                            <th>
+                                Price
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <!-- TABLE DATA -->
+
+                    <tbody>
+
+
+                        <!-- BIRYANI -->
+
+                        <tr>
+
+                            <td>
+                                Chicken Biryani
+                            </td>
+
+                            <td>
+                                Spicy chicken biryani
+                                with delicious rice
+                                and traditional spices.
+                            </td>
+
+                            <td class="price">
+                                Rs. 450
+                            </td>
+
+                        </tr>
+
+
+                        <!-- KARAHI -->
+
+                        <tr>
+
+                            <td>
+                                Chicken Karahi
+                            </td>
+
+                            <td>
+                                Fresh chicken cooked
+                                with tomatoes and
+                                special spices.
+                            </td>
+
+                            <td class="price">
+                                Rs. 900
+                            </td>
+
+                        </tr>
+
+
+                        <!-- BURGER -->
+
+                        <tr>
+
+                            <td>
+                                Beef Burger
+                            </td>
+
+                            <td>
+                                Juicy beef burger
+                                with cheese and
+                                fresh vegetables.
+                            </td>
+
+                            <td class="price">
+                                Rs. 550
+                            </td>
+
+                        </tr>
+
+
+                        <!-- PIZZA -->
+
+                        <tr>
+
+                            <td>
+                                Chicken Pizza
+                            </td>
+
+                            <td>
+                                Delicious chicken
+                                pizza with extra
+                                cheese.
+                            </td>
+
+                            <td class="price">
+                                Rs. 850
+                            </td>
+
+                        </tr>
+
+
+                        <!-- FRIES -->
+
+                        <tr>
+
+                            <td>
+                                French Fries
+                            </td>
+
+                            <td>
+                                Crispy golden french
+                                fries served hot.
+                            </td>
+
+                            <td class="price">
+                                Rs. 250
+                            </td>
+
+                        </tr>
+
+
+                        <!-- DRINK -->
+
+                        <tr>
+
+                            <td>
+                                Cold Drink
+                            </td>
+
+                            <td>
+                                Chilled soft drink
+                                served with ice.
+                            </td>
+
+                            <td class="price">
+                                Rs. 150
+                            </td>
+
+                        </tr>
+
+
+                        <!-- CAKE -->
+
+                        <tr>
+
+                            <td>
+                                Chocolate Cake
+                            </td>
+
+                            <td>
+                                Fresh chocolate cake
+                                with rich chocolate
+                                flavor.
+                            </td>
+
+                            <td class="price">
+                                Rs. 350
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+
