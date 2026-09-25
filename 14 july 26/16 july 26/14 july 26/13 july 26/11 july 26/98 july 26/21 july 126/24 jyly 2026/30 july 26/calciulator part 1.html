@@ -1,0 +1,225 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="calculator">
+            <div id="result">
+
+                <div id="history">
+                    <p id="history-value"></p>
+                </div>
+
+                <div id="output">
+                    <p id="output-value"></p>
+                </div>
+
+            </div>
+            <div id="keyboard">
+
+                <button class="operator" id="clear">C</button>
+                <button class="operator" id="backspace">CE</button>
+                <button class="operator" id="percent">%</button>
+                <button class="operator" id="divide">/</button>
+
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button class="operator" id="multiply">*</button>
+
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button class="operator" id="minus">-</button>
+
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button class="operator" id="plus">+</button>
+
+                <button class="empty"></button>
+                <button class="number" id="0">0</button>
+                <button class="empty"></button>
+                <button class="operator" id="equal">=</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function getHistory() {
+            return document.getElementById("history-value").innerText;
+        }
+        function printHistory(num) {
+            document.getElementById("history-value").innerText = num;
+        }
+        function getOutput() {
+            return document.getElementById("output-value").innerText;
+        }
+        function printOutput(num) {
+
+            if (num == "") {
+                document.getElementById("output-value").innerText = num;
+            }
+            else {
+                document.getElementById("output-value").innerText =
+                    getFormattedNumber(num);
+            }
+        }
+        function getFormattedNumber(num) {
+
+            if (num == "-") {
+                return "";
+            }
+
+            var n = Number(num);
+            var value = n.toLocaleString("en");
+
+            return value;
+        }
+        function reverseNumberFormat(num) {
+            return Number(num.replace(/,/g, ""));
+        }
+        var operator = document.getElementsByClassName("operator");
+
+        for (var i = 0; i < operator.length; i++) {
+
+            operator[i].addEventListener("click", function () {
+
+                if (this.id == "clear") {
+
+                    printHistory("");
+                    printOutput("");
+
+                }
+                else if (this.id == "backspace") {
+
+                    var output = reverseNumberFormat(getOutput());
+
+                    if (!isNaN(output)) {
+
+                        output = output.toString();
+
+                        output = output.substr(0, output.length - 1);
+
+                        printOutput(output);
+                    }
+                }
+                else if (this.id == "equal") {
+
+                    var history = getHistory();
+                    var output = getOutput();
+
+                    if (history != "" && output != "") {
+
+                        var result = eval(
+                            reverseNumberFormat(history) +
+                            getOperator(history) +
+                            reverseNumberFormat(output)
+                        );
+
+                        printOutput(result);
+                        printHistory("");
+                    }
+                }
+                else if (this.id == "percent") {
+
+                    var output = getOutput();
+
+                    if (output != "") {
+
+                        output = reverseNumberFormat(output);
+
+                        output = output / 100;
+
+                        printOutput(output);
+                    }
+                }
+                else {
+
+                    var output = getOutput();
+
+                    if (output != "") {
+
+                        var history = getHistory();
+
+                        if (history != "") {
+
+                            history = history + output + this.innerText;
+
+                            printHistory(history);
+
+                            printOutput("");
+
+                        }
+
+                        else {
+
+                            printHistory(output + this.innerText);
+
+                            printOutput("");
+                        }
+                    }
+                }
+
+            });
+        }
+        function getOperator(history) {
+
+            if (history.indexOf("+") != -1) {
+                return "+";
+            }
+
+            else if (history.indexOf("-") != -1) {
+                return "-";
+            }
+
+            else if (history.indexOf("*") != -1) {
+                return "*";
+            }
+
+            else if (history.indexOf("/") != -1) {
+                return "/";
+            }
+        }
+        var number = document.getElementsByClassName("number");
+
+        for (var i = 0; i < number.length; i++) {
+
+            number[i].addEventListener("click", function () {
+
+                var output = getOutput();
+
+                if (output == "") {
+
+                    printOutput(this.innerText);
+
+                }
+                else {
+
+                    output = reverseNumberFormat(output);
+
+                    output = output.toString() + this.innerText;
+
+                    printOutput(output);
+                }
+
+            });
+        }
+
+    </script>
+
+</body>
+</html>
